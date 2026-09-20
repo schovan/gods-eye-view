@@ -1,0 +1,17 @@
+[package]
+name = "gods-eye-view"
+version = "0.1.1"
+description = "God's Eye View desktop app"
+edition = "2021"
+license = "MIT"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1

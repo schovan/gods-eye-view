@@ -14,6 +14,7 @@ export function createBrowserViteConfig({
     plugins: [cesium(), applicationHtmlPlugin(), ...plugins],
     ...(publicDir === undefined ? {} : { publicDir }),
     server: {
+      watch: { ignored: ['**/src-tauri/**'] },
       host: host || 'localhost',
       port: parseInt(port, 10) || 4173,
       allowedHosts:
